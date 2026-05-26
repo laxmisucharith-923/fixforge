@@ -1,133 +1,0 @@
-ó
-    8j  ã                  ó  • % S r SSKJr  SSKrSSKrSSKrSSKJ r Jr  SSK	J
-r
-  SSK
-Jr  SS K
-Jr  SSKJr  S	S
-S
-SS
-.rS\S'   SrS\S'   \  " S S5      5       r\  " S S5      5       rSSS jjrSSS jjrSS S jjrS!S jrS"S#S jjrg)$zDShared utilities: logging, env loading, repo parsing, cost tracking.é    )Ú
-annotationsN)Ú	dataclassÚfield)ÚPath)ÚFinal)Úurlparse)Ú
-load_dotenv)gš™™™™™©?g{®Gáz´?)gìQ¸…ëÁ?gìQ¸…ëÑ?)g      @g      .@)g333333Ã?g333333ã?)ÚgroqÚdeepseekÚ	anthropicÚopenaiz%Final[dict[str, tuple[float, float]]]ÚCOST_PER_MILLIONz6%(asctime)s | %(levelname)-8s | %(name)s | %(message)sz
-Final[str]ÚDEFAULT_LOG_FORMATc                  óB   • \ rS rSr% SrS\S'   S\S'   \S	S j5       r S rg)
-Ú RepoRefé   z#Parsed GitHub repository reference.ÚstrÚownerÚnamec                ó8   • U R                    SU R                   3$ )NÚ/©r   r   ©Úselfs    Ú:C:\Users\laxmi\OneDrive\Desktop\FixForge\fixforge\utils.pyÚ	full_nameÚRepoRef.full_name#   s   € à—*‘*˜Q˜tŸy™y˜kÐ*Ð*ó    © N©Úreturnr   )	Ú__name__Ú
-__module__Ú__qualname__Ú__firstlineno__Ú __doc__Ú__annotations__Úpropertyr   Ú__static_attributes__r   r   r   r   r      s!   ‡ á-à
-ƒJØ
-
-ƒIà
-ó+ó ó+r   r   c                  óš   • \ rS rSr% SrS\S'   SrS\S '   Sr S\S'   SrS\S	'   S
-r	S
-\S'   \
-" \
-S
-9rS\S'    S       SS jjr
-SS jrSrg)Ú
-CostTrackeré(   z/Accumulates LLM token usage and estimated cost.r   Úproviderr   ÚintÚinput_tokensÚ
-output_tokensÚcallsg        ÚfloatÚ
-estimated_usd)Údefault_factoryz	list[str]Ú detailsc           
-     óh  • U =R                   U-
-  sl         U =R                  U-
-  sl        U =R                  S-
-  sl        [        R	                  U R
-                  S5      nUS-
-  US   -  US-
-  US   -  -   nU =R                  U-
-  sl        U R                  R                  U SU SU S US 3 5        g	)
-z0Record token usage from a single LLM invocation.é   )g      ð?g       @i@B r   z: in=z, out=z, ~$z.6fN)	r/   r0   r1   r   Úgetr-   r3   r5   Úappend)r   r/   r0   ÚlabelÚratesÚcosts         r   ÚrecordÚCostTracker.record3   s¶   € ð 	
-×Ò˜\Ñ)ÕØ×Ò˜mÑ+ÕØ
-Š
-a‰
-ä ×$Ñ$ T§]¡]°JÓ?ˆØ˜yÑ(¨E°!©HÑ4Ø˜IÑ%Ø!‰Hñ8ñ ˆð 	
-×Ò˜dÑ"ÕØ‰×ÑØˆgU˜<˜.¨¨}¨o¸TÀ$ÀsÀÐLõ	
-r   c           
-     óŒ   • SU R                    SU R                   SU R                   SU R                  S SU R                   S 3
-$ )zHuman-readable cost summary.z
-LLM calls: z
- | Tokens: z in / z out | Estimated cost: ~$z.4fz (Ú))r1   r/   r0   r3   r-   r   s    r   Ú summaryÚCostTracker.summaryG   sX   € ð ˜$Ÿ*™*˜ð &Ø×(Ñ(Ð)¨°×0BÑ0BÐ/Cð D!Ø!%×!3Ñ!3°CÐ 8¸¸4¿=¹=¸/Èð
-Lð	
-r   r   N)Úllm_call)r/   r.   r0   r.   r:   r   r!   ÚNoner    )r"   r#   r$   r%   r&   r'   r/   r0   r1   r3   r   Úlistr5   r=   rA   r)   r   r   r   r+   r+   (   su   ‡ á9àƒMØ€L#ÓØ€M3ÓØ€Eˆ3ƒNØ€M5ÓÙ¨tÑ4€GˆYÓ4ð  ð	
-àð
-ð ð 
-ð ð	
-ð
- 
-õ
-
-÷(
-r   r+   c                 óÎ   • U =(       d    [         R                  " SS5      R                  5       n[        R                  " [
-        [        U[        R                  5      [        SS9  g)zConfigure root logging once.Ú	LOG_LEVELÚINFOT)ÚlevelÚformatÚforceN)ÚosÚgetenvÚupperÚ loggingÚ
-basicConfigÚ getattrrH   r   )rI   Ú	log_levels     r   Ú
-setup_loggingrS   P   sD   € à×8œ"Ÿ)š) K°Ó8×?Ñ?ÓA€IÜ
-×ÒÜ”g˜y¬'¯,©,Ó7Ü!Øó r   c                óV  • U (       a!  U R                  5       (       a  [        U 5        g[        [        5      R	                  5       R
-                  R
-                  S-
-  [        R                  " 5       S-
-  /nU H%  nUR                  5       (       d  M  [        U5          g
-   [        5         g)z/Load variables from .env (project root or cwd).Nz.env) Ú is_filer	   r   Ú__file__Ú resolveÚparentÚcwd)Úenv_pathÚ
-candidatesÚpaths      r   Úload_environmentr]   Z   s   € æ H×$Ñ$×&Ñ&ÜHÔØô 	
-ŒX‹×ÑÓ ×'Ñ'×.Ñ.°Ñ7ÜŠ‹
-VÑð€Jó ˆØ
-<‰<>‹>Ü˜ÔÙñ  ô …Mr   c                ó~   • [         R                  " X5      nU(       a  U(       d  [        SU  S35      eU=(       d    S$ )z7Read an environment variable with optional requirement.z'Missing required environment variable: z.. Copy .env.example to .env and set your keys.Ú )rL   rM   ÚRuntimeError)ÚkeyÚ defaultÚrequiredÚvalues       r   Ú get_envre   k   s?   € äIŠIcÓ#€EÞ žÜØ5°c°Uð ;;ð 
-<ó
-ð 	
-ð ;BÐr   c                óü  • U R                  5       R                  S5      n [        R                  " SU 5      (       a,  U R	                  SS5      u  p[
-        XR
-                  S5      S9$ U R                  S5      (       aT  [        R                  " S U 5      nU(       a(  [
-        UR                  S5      UR                  S5      S9$ [        S	U  35      e[        U 5      nS
-UR                  ;  a  [        S
-U  35      eUR                  R                  S5      R	                  S5       Vs/ s H
-  oU(       d  M
-  UPM  
-   nn[        U5      S:  a  [        SU  35      e[
-        US
-   US   R
-                  S5      S9$ s  snf )zÃ
-Parse owner/repo from a GitHub URL or 'owner/repo' shorthand.
-
-Supports:
-  - https://github.com/owner/repo
-  - https://github.com/owner/repo.git
-  - git@github.com:owner/repo.git
-  - owner/repo
-r   z^[\w.-]+/[\w.-]+$r7   z.gitr   zgit@z"git@[^:]+:([^/]+)/(.+?)(?:\.git)?$é   zInvalid git SSH URL: z
-github.comzNot a GitHub URL: z!Could not parse owner/repo from: r   )ÚstripÚrstripÚreÚmatchÚsplitr   ÚremovesuffixÚ
-startswithÚgroupÚ
-ValueErrorr   Únetlocr\   Úlen) Úrepo_urlr   r   rk   ÚparsedÚpÚpartss           r   Úparse_repo_urlrw   v   sI  € ð ~‰~Ó×&Ñ& sÓ+€Hä 	‡x‚xÐ$ h× /Ñ /Ø—n‘n S¨!Ó,‰
-ˆÜ˜U×):Ñ):¸6Ó)BÑCÐCà × Ñ ˜6× "Ñ "ä—’Ð>ÀÓIˆÞ
-Ü §¡¨Q£°e·k±kÀ!³nÑEÐEÜÐ0°°
-Ð;Ó<Ð<ä
-hÓ
-€FØ ˜6Ÿ=™=Ó (ÜÐ-¨h¨ZÐ8Ó9Ð9àŸ
-™
-×)Ñ)¨#Ó.×4Ñ4°SÔ9Ó?Ò91»QQÑ9€EÐ?Ü 
-ˆ5ƒzAƒ~ÜÐ<¸X¸JÐGÓHÐHä
-˜˜q™¨¨a©×(=Ñ(=¸fÓ(EÑ
-FÐFùò	 
-@s   Ä'
-E9Ä5E9c                ój   • [        U 5      U::  a  U $ US-  nU SU S[        U 5      U-
-   S3-   X* S -   $ )z+Truncate long text with an ellipsis marker.rg   Nz
-
-... [truncated z
- chars] ...
-
-)rr   )ÚtextÚ	max_charsÚhalfs      r   Ú
-truncate_textr|   ˜   sT   € ä 
-ˆ4ƒyIÓ Øˆ
-Ø
-˜‰>€DàˆUˆdˆ
-Ø¤ D£	¨IÑ 5Ð6°oÐ
-Fñ	Gà
-ˆuˆvˆ,ñ	ðr   )N)rI   ú
-str | Noner!   rD   )rZ   z
-Path | Noner!   rD   )NF)ra   r   rb   r}   rc   Úboolr!   r   )rs   r   r!   r   )ià.  )ry   r   rz   r.   r!   r   )r&   Ú
-__future__r   rO   rL   rj   Ú
-dataclassesr   r   Ú pathlibr   Útypingr    Úurllib.parser   Údotenvr	   r   r'   r   r   r+   rS   r]   re   rw   r|   r   r   r   Ú<module>r…      s    ðÚ Jå "ã Û 	Û 	ß (Ý Ý Ý !å ð 
-ØØØñ	;Ð Ð7ó ð =ð Jó ð
- 
-÷+ð +ó 
-ð+ð 
-÷$
-ð $
-ó 
-ð$
-öN öö"ôG÷D	r   
