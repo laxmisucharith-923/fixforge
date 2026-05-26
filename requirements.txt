@@ -1,0 +1,10 @@
+# FixForge MVP dependencies (Python 3.11+)
+PyGithub>=2.5.0,<3
+GitPython>=3.1.43,<4
+python-dotenv>=1.0.1,<2
+langchain-core>=0.3.0,<0.4
+langchain>=0.3.0,<0.4
+langchain-groq>=0.2.0,<0.3
+langchain-openai>=0.2.0,<0.3
+langchain-anthropic>=0.3.0,<0.4
+ruff>=0.8.0,<1
